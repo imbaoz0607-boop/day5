@@ -56,7 +56,7 @@
     .content{padding:0 12px 12px}
 
     .timeline{border:1px solid var(--line);border-radius:14px;background:#ffffff;overflow:hidden}
-    .tRow{display:grid;grid-template-columns: 92px 1fr;gap:12px;padding:12px;border-bottom:1px solid rgba(0,0,0,.06)}
+    .tRow{display:grid;grid-template-columns: 92px 1fr;gap:12px;padding:12px;border-bottom:none}
     .tRow:last-child{border-bottom:none}
     .tRow > *{min-width:0}
     .tRow--full{grid-template-columns:1fr}
@@ -67,11 +67,9 @@
     .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .btn{text-decoration:none;font-size:12px;padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:rgba(96,165,250,.10)}
 
-    /* Day5 補充：交通/說明文字 */
     .noteTransit{margin:14px 0 6px 0;font-size:14px;color:var(--muted);line-height:1.5}
     .noteTransit--tight{margin-top:10px;line-height:1.5;font-size:14px}
 
-    /* Gallery */
     .galleryWrap{margin-top:10px}
     .galleryTitle{margin:0 0 8px;padding:0 2px;font-weight:800;font-size:13px}
     .galleryRow{
@@ -88,11 +86,25 @@
     .gItem img{width:100%;height:100%;object-fit:cover;display:block}
     .gItem[data-caption]::after{content: attr(data-caption);position:absolute;left:8px; right:8px; bottom:8px;padding:6px 8px;border-radius:12px;background:rgba(17,24,39,.62);color:#fff;font-size:12px;line-height:1.35;letter-spacing:.2px;pointer-events:none;text-shadow:0 1px 2px rgba(0,0,0,.25);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 
-    /* ✅ 編輯頁的導覽列 */
     .editBar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid var(--line);background:#fff}
     .editHint{color:var(--muted);font-size:12px}
 
-    @media (max-width: 640px){
+    /* 收合層左右貼齊 timeline 內框（保留圓角） */
+.timeline .tRow--full > details{
+  margin-left:-12px;
+  margin-right:-12px;
+  border-radius:14px; /* 與 timeline 一致的圓角 */
+}
+.timeline .tRow--full > details > summary{
+  padding-left:16px;
+  padding-right:16px;
+}
+.timeline .tRow--full > details .content{
+  padding-left:16px;
+  padding-right:16px;
+}
+
+@media (max-width: 640px){
       .tRow{grid-template-columns: 72px 1fr; gap:8px; padding:12px}
       .tRow.tRow--full{grid-template-columns:1fr}
       .num{width:38px;height:38px}
@@ -182,7 +194,9 @@
               <div>
                 <div class="place">櫛田神社</div>
                 <div class="meta">擁有古老歷史的櫛田神社為博多總鎮守(守護神)，以櫛田桑的暱稱受當地居民愛戴。櫻花數量不多屬於點綴型，垂櫻與八重櫻在滿開時在傳統建築的襯托下非常精緻。</div>
-              </div>
+
+
+
             </div>
 
             <div class="tRow tRow--full" style="padding-left:0;padding-right:0">
@@ -192,11 +206,7 @@
                   <div class="gItem" role="listitem" data-caption="櫛田神社鳥居與櫻花"><img loading="lazy" src="day5/08.jpg" data-full="day5/08.jpg" alt="櫛田神社鳥居與櫻花"></div>
                   <div class="gItem" role="listitem" data-caption="如同柳樹枝條般向下垂落的垂櫻"><img loading="lazy" src="day5/09.jpg" data-full="day5/09.jpg" alt="如同柳樹枝條般向下垂落的枝垂櫻"></div>
                   <div class="gItem" role="listitem" data-caption="五瓣品種，樹齡可達數百年以上"><img loading="lazy" src="day5/10.jpg" data-full="day5/10.jpg" alt="五瓣品種，樹齡可達數百年以上"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tRow" style="padding-left:0;padding-right:0">
+                <div class="tRow" style="padding-left:0;padding-right:0">
               <div><div class="time">11:50</div></div>
               <div>
                 <div class="place">冷泉公園</div>
@@ -320,32 +330,34 @@
           </div>
         </details>
       </div>
-    </div><!-- /.timeline -->
 
-    <!-- 🛍 天神站附近｜逛街地圖（獨立到外框外） -->
-    <div style="margin-top:14px">
-      <div>
+      <!-- 🛍 天神站附近｜逛街地圖（移出收合層） -->
+      <div style="margin:14px 12px 0 12px">
         <div class="place">🛍 天神站附近｜逛街地圖</div>
         <div class="meta">以天神地下街為起點：天神地下街 → PARCO → Solaria Plaza → 三越 → 大丸。</div>
 
-        📍 <strong>天神地下街</strong>：地下商店街，雨天好走，藥妝／雜貨／伴手禮齊全，連接各大百貨。<br>
-        🛍 <strong>PARCO（天神）</strong>：年輕潮流感強，動漫聯名、Loft、無印良品，流行品牌多。<br>
-        🛍 <strong>Solaria Plaza</strong>：設計感與質感路線，女裝品牌多，咖啡廳好坐。<br>
-        🛍 <strong>福岡三越</strong>：傳統高級百貨，精品與地下美食街、禮盒伴手禮選擇多。<br>
-        🛍 <strong>大丸天神</strong>：穩重型百貨，地下食品區很強，甜點熟食好買。
-
-        <div class="links" style="margin-top:10px; display:flex; flex-wrap:wrap; gap:8px;">
-          <a class="btn" target="_blank" rel="noopener" href="day5/天神地下街.pdf">📄 天神地下街（PDF）</a>
-          <a class="btn" target="_blank" rel="noopener" href="day5/百貨公司位置圖.pdf">📄 百貨公司位置圖（PDF）</a>
-
-          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=%E5%A4%A9%E7%A5%9E%E5%9C%B0%E4%B8%8B%E8%A1%97&travelmode=walking">📍 地下街</a>
-          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=PARCO%20Fukuoka%20Tenjin&travelmode=walking">🛍 PARCO（天神）</a>
-          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Solaria%20Plaza%20Fukuoka&travelmode=walking">🛍 Solaria Plaza</a>
-          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Fukuoka%20Mitsukoshi&travelmode=walking">🛍 三越（福岡天神）</a>
-          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Daimaru%20Fukuoka%20Tenjin&travelmode=walking">🛍 大丸（福岡天神）</a>
+        <div style="margin-top:8px;line-height:1.8;font-size:14px;">
+          📍 <strong>天神地下街</strong>：地下商店街，雨天好走，藥妝／雜貨／伴手禮齊全，連接各大百貨。<br>
+          🛍 <strong>PARCO（天神）</strong>：年輕潮流感強，動漫聯名、Loft、無印良品，流行品牌多。<br>
+          🛍 <strong>Solaria Plaza</strong>：設計感與質感路線，女裝品牌多，咖啡廳好坐。<br>
+          🛍 <strong>福岡三越</strong>：傳統高級百貨，精品與地下美食街、禮盒伴手禮選擇多。<br>
+          🛍 <strong>大丸天神</strong>：穩重型百貨，地下食品區很強，甜點熟食好買。
         </div>
       </div>
-    </div>
+
+    </div><!-- /.timeline -->
+
+  <!-- 導航控制鈕（移出收合層） -->
+  <div class="links" style="margin-top:14px; display:flex; flex-wrap:wrap; gap:8px;">
+    <a class="btn" target="_blank" rel="noopener" href="day5/天神地下街.pdf">📄 天神地下街（PDF）</a>
+    <a class="btn" target="_blank" rel="noopener" href="day5/百貨公司位置圖.pdf">📄 百貨公司位置圖（PDF）</a>
+
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=%E5%A4%A9%E7%A5%9E%E5%9C%B0%E4%B8%8B%E8%A1%97&travelmode=walking">📍 地下街</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=PARCO%20Fukuoka%20Tenjin&travelmode=walking">🛍 PARCO（天神）</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Solaria%20Plaza%20Fukuoka&travelmode=walking">🛍 Solaria Plaza</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Fukuoka%20Mitsukoshi&travelmode=walking">🛍 三越（福岡天神）</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Daimaru%20Fukuoka%20Tenjin&travelmode=walking">🛍 大丸（福岡天神）</a>
+  </div>
 
   </div></div>
 </section>
