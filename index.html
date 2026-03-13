@@ -63,6 +63,9 @@
     .time{font-variant-numeric: tabular-nums;font-weight:800}
     .meta{color:var(--muted);font-size:12px;margin-top:3px;line-height:1.4}
     .place{font-weight:700}
+    .metaList{margin:6px 0 0 0;padding-left:1.2em;color:var(--muted);font-size:12px;line-height:1.5}
+    .metaList li{margin:0 0 4px 0}
+    .metaList li:last-child{margin-bottom:0}
 
     .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .btn{text-decoration:none;font-size:12px;padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:rgba(96,165,250,.10)}
@@ -70,8 +73,8 @@
     .noteTransit{margin:14px 0 6px 0;font-size:14px;color:var(--muted);line-height:1.5}
     .noteTransit--tight{margin-top:10px;line-height:1.5;font-size:14px}
 
-    .galleryWrap{margin-top:10px}
-    .galleryTitle{margin:0 0 8px;padding:0 2px;font-weight:800;font-size:13px}
+    .galleryWrap{margin-top:4px}
+    .galleryTitle{display:none}
     .galleryRow{
       display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;
       scroll-snap-type:x mandatory;-webkit-overflow-scrolling: touch;
@@ -135,179 +138,183 @@
         <!-- =========================
              這段 template 是「要貼回主檔」的唯一區塊
              貼回時：把主檔 Day5 那段整個 <section id="day5">...</section>
-             直接用下面 <template id="tpl-day5"> 內的內容替換。
-        ========================== -->
+             直接用下面
+             ========================= -->
         <template id="tpl-day5">
 <section class="day5Tpl">
-
   <div class="dayHeader">
-    <div class="dayTitle"><div class="num">5</div><div class="tblock"><h2>福岡市區散步｜天神・博多</h2></div></div>
+    <div class="dayTitle">
+      <div class="num">5</div>
+      <div class="tblock"><h2>福岡市區散步｜天神・博多</h2></div>
+    </div>
     <div class="dayHeaderRight"><div class="dayDateRight">03/27（五）</div></div>
   </div>
 
-  <div class="dayBody"><div class="content">
+  <div class="dayBody">
+    <div class="content">
+      <div class="timeline">
 
-    <div class="timeline">
-
-      <div class="tRow">
-        <div><div class="time">10:00</div><div class="meta">早／午餐</div></div>
-        <div>
-          <div class="place">柳橋連合市場｜食堂 光
-            <a href="https://www.instagram.com/shokudou_mitsu/" target="_blank" rel="noopener" style="margin-left:10px;color:#2563eb;font-weight:600;font-size:13px;">IG</a>
-           <a href="https://reurl.cc/9WzmyY" target="_blank" rel="noopener" style="margin-left:10px;color:#2563eb;font-weight:600;font-size:13px;">訂位/只能訂PM5:30以後</a>
+        <div class="tRow">
+          <div>
+            <div class="time">10:00</div>
+            <div class="meta">早／午餐</div>
           </div>
-          <div class="meta">在地市場食堂，以新鮮海鮮定食、生魚片丼為主；10點開始營業，9點多可以先到店門口的候位表填寫資料。</div>
-        </div>
-      </div>
-
-
-      <div class="tRow tRow--full" style="padding:6px 12px;">
-        <div class="galleryWrap" aria-label="柳橋連合市場｜食堂光 照片" style="margin-top:0">
-          <p class="galleryTitle">📷 柳橋連合市場｜食堂 光</p>
-          <div class="galleryRow galleryRow--flush" role="list">
-            <div class="gItem" role="listitem" data-caption="柳橋連合市場 外觀"><img loading="lazy" src="day5/01.jpg" data-full="day5/01.jpg" alt="柳橋連合市場 外觀"></div>
-            <div class="gItem" role="listitem" data-caption="市場內部"><img loading="lazy" src="day5/02.jpg" data-full="day5/02.jpg" alt="市場內部"></div>
-            <div class="gItem" role="listitem" data-caption="海鮮攤位"><img loading="lazy" src="day5/03.jpg" data-full="day5/03.jpg" alt="海鮮攤位"></div>
-            <div class="gItem" role="listitem" data-caption="食堂 光 外觀"><img loading="lazy" src="day5/04.jpg" data-full="day5/04.jpg" alt="食堂 光 外觀"></div>
-            <div class="gItem" role="listitem" data-caption="海鮮丼定食"><img loading="lazy" src="day5/05.jpg" data-full="day5/05.jpg" alt="海鮮丼定食"></div>
-            <div class="gItem" role="listitem" data-caption="豪華鮪魚丼"><img loading="lazy" src="day5/06.jpg" data-full="day5/06.jpg" alt="豪華鮪魚丼"></div>
-            <div class="gItem" role="listitem" data-caption="午間菜單"><img loading="lazy" src="day5/07.jpg" data-full="day5/07.jpg" alt="午間菜單"></div>
+          <div>
+            <div class="place">柳橋連合市場｜食堂 光
+              <a href="https://www.instagram.com/shokudou_mitsu/" target="_blank" rel="noopener" style="margin-left:10px;color:#2563eb;font-weight:600;font-size:13px;">IG</a>
+              <a href="https://reurl.cc/9WzmyY" target="_blank" rel="noopener" style="margin-left:10px;color:#2563eb;font-weight:600;font-size:13px;">訂位/只能訂PM5:30以後</a>
+            </div>
+            <div class="meta">在地市場食堂，以新鮮海鮮定食、生魚片丼為主；10點開始營業，9點多可以先到店門口的候位表填寫資料。</div>
           </div>
         </div>
-      </div>
 
-      <div class="tRow tRow--full" style="padding:6px 12px;border-bottom:0">
-        <details style="margin-top:0;">
-          <summary style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;">
-            <span class="sumText" style="font-weight:800;font-size:16px;">往櫛田神社、冷泉公園、真言宗 東長寺 →</span>
-            <span class="chev">⌄</span>
-          </summary>
-          <div class="content" style="padding-top:0">
-
-            <div style="margin-top:10px; line-height:1.7; font-size:14px;">
-              🚶‍♂️ 步行　經春吉街區－位於天神與博多之間，在地生活氣息濃厚的巷弄小店與靜謐住宅區。距離約 1.5 公里／步行時間約 20–25 分鐘。<br>
-              🚌 公車　／　🚇 地鐵　／　🚕 計程車
+        <div class="tRow tRow--full" style="padding:4px 12px 8px;">
+          <div class="galleryWrap" aria-label="柳橋連合市場｜食堂光 照片" style="margin-top:0">
+            <div class="galleryRow galleryRow--flush" role="list">
+              <div class="gItem" role="listitem" data-caption="柳橋連合市場 外觀"><img loading="lazy" src="day5/01.jpg" data-full="day5/01.jpg" alt="柳橋連合市場 外觀"></div>
+              <div class="gItem" role="listitem" data-caption="市場內部"><img loading="lazy" src="day5/02.jpg" data-full="day5/02.jpg" alt="市場內部"></div>
+              <div class="gItem" role="listitem" data-caption="海鮮攤位"><img loading="lazy" src="day5/03.jpg" data-full="day5/03.jpg" alt="海鮮攤位"></div>
+              <div class="gItem" role="listitem" data-caption="食堂 光 外觀"><img loading="lazy" src="day5/04.jpg" data-full="day5/04.jpg" alt="食堂 光 外觀"></div>
+              <div class="gItem" role="listitem" data-caption="海鮮丼定食"><img loading="lazy" src="day5/05.jpg" data-full="day5/05.jpg" alt="海鮮丼定食"></div>
+              <div class="gItem" role="listitem" data-caption="豪華鮪魚丼"><img loading="lazy" src="day5/06.jpg" data-full="day5/06.jpg" alt="豪華鮪魚丼"></div>
+              <div class="gItem" role="listitem" data-caption="午間菜單"><img loading="lazy" src="day5/07.jpg" data-full="day5/07.jpg" alt="午間菜單"></div>
             </div>
-
-            <div class="tRow" style="padding-left:0;padding-right:0">
-              <div><div class="time">11:20</div></div>
-              <div>
-                <div class="place">櫛田神社</div>
-                <div class="meta">擁有古老歷史的櫛田神社為博多總鎮守(守護神)，以櫛田桑的暱稱受當地居民愛戴。櫻花數量不多屬於點綴型，垂櫻與八重櫻在滿開時在傳統建築的襯托下非常精緻。</div>
-
-
-
-            </div>
-
-            <div class="tRow tRow--full" style="padding-left:0;padding-right:0">
-              <div class="galleryWrap" aria-label="櫛田神社 照片" style="margin-top:0">
-                <p class="galleryTitle">📷 櫛田神社</p>
-                <div class="galleryRow galleryRow--flush" role="list">
-                  <div class="gItem" role="listitem" data-caption="櫛田神社鳥居與櫻花"><img loading="lazy" src="day5/08.jpg" data-full="day5/08.jpg" alt="櫛田神社鳥居與櫻花"></div>
-                  <div class="gItem" role="listitem" data-caption="如同柳樹枝條般向下垂落的垂櫻"><img loading="lazy" src="day5/09.jpg" data-full="day5/09.jpg" alt="如同柳樹枝條般向下垂落的枝垂櫻"></div>
-                  <div class="gItem" role="listitem" data-caption="五瓣品種，樹齡可達數百年以上"><img loading="lazy" src="day5/10.jpg" data-full="day5/10.jpg" alt="五瓣品種，樹齡可達數百年以上"></div>
-                <div class="tRow" style="padding-left:0;padding-right:0">
-              <div><div class="time">11:50</div></div>
-              <div>
-                <div class="place">冷泉公園</div>
-                <div class="meta">神社旁的小型市區公園，櫻花以吉野櫻居多，櫻花盛開的時候，許多人會坐在櫻花樹下野餐。</div>
-              </div>
-            </div>
-
-            <div class="tRow tRow--full" style="padding-left:0;padding-right:0">
-              <div class="galleryWrap" aria-label="冷泉公園 照片" style="margin-top:0">
-                <p class="galleryTitle">📷 冷泉公園</p>
-                <div class="galleryRow galleryRow--flush" role="list">
-                  <div class="gItem" role="listitem" data-caption="櫻花步道"><img loading="lazy" src="day5/11.jpg" data-full="day5/11.jpg" alt="冷泉公園櫻花步道"></div>
-                  <div class="gItem" role="listitem" data-caption="鐘塔與櫻花"><img loading="lazy" src="day5/12.jpg" data-full="day5/12.jpg" alt="冷泉公園鐘塔與櫻花"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tRow" style="padding-left:0;padding-right:0">
-              <div><div class="time">12:10</div></div>
-              <div>
-                <div class="place">真言宗 東長寺</div>
-                <div class="meta">可參拜日本最大木造坐像的佛像(高10.8ｍ，重30t)及體驗地獄極樂巡禮，費用約為 ¥100-¥300、觀賞櫻花。</div>
-              </div>
-            </div>
-
-            <div class="tRow tRow--full" style="padding-left:0;padding-right:0">
-              <div class="galleryWrap" aria-label="真言宗 東長寺 照片" style="margin-top:0">
-                <p class="galleryTitle">📷 真言宗 東長寺</p>
-                <div class="galleryRow galleryRow--flush" role="list">
-                  <div class="gItem" role="listitem" data-caption="福岡大佛"><img loading="lazy" src="day5/13.jpg" data-full="day5/13.jpg" alt="福岡大佛"></div>
-                  <div class="gItem" role="listitem" data-caption="東長寺入口超大櫻花樹"><img loading="lazy" src="day5/14.jpg" data-full="day5/14.jpg" alt="東長寺入口超大櫻花樹"></div>
-                  <div class="gItem" role="listitem" data-caption="五重塔與櫻花"><img loading="lazy" src="day5/15.jpg" data-full="day5/15.jpg" alt="五重塔與櫻花"></div>
-                  <div class="gItem" role="listitem" data-caption="櫻花與五重塔"><img loading="lazy" src="day5/16.jpg" data-full="day5/16.jpg" alt="櫻花與五重塔"></div>
-                  <div class="gItem" role="listitem" data-caption="櫻花特寫"><img loading="lazy" src="day5/17.jpg" data-full="day5/17.jpg" alt="櫻花特寫"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="noteTransit">
-              🚇 <strong>真言宗 東長寺 → 天神地下街：</strong><br>
-              由「祇園站」（空港線）搭乘 1 站至「天神站」，約 5 分鐘（210 円）。
-            </div>
-
           </div>
-        </details>
-      </div>
+        </div>
 
-      <div class="tRow tRow--full" style="padding:6px 12px;">
-        <details style="margin-top:0;">
-          <summary style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;">
-            <span class="sumText" style="font-weight:800;font-size:16px;">往舞鶴公園／福岡城跡 →</span>
-            <span class="chev">⌄</span>
-          </summary>
-          <div class="content" style="padding-top:0">
-
-            <div class="noteTransit--tight">
-              <div>搭乘公車／地鐵步行時間仍長，進入公園也要走，故直接搭乘計程車 🚕。</div>
-              <div>行車時間：約 12–20 分／費用：約 1500–2000 円（實際依交通、時間略有差）</div>
-            </div>
-
-            <div class="tRow" style="padding-left:0;padding-right:0">
-              <div><div class="time">11:30</div></div>
-              <div>
-                <div class="place">舞鶴公園
-                  <a href="https://www-midorimachi-jp.translate.goog/maiduru/?_x_tr_sl=ja&_x_tr_tl=zh-TW&_x_tr_hl=ja" target="_blank" rel="noopener" style="margin-left:10px;font-size:13px;font-weight:600;color:#2563eb;">官網</a>
-                </div>
-                <div class="meta">以福岡城址為其象徵，自然景色四季分明，1000顆櫻花是福岡市內賞櫻最為知名的公園。園內並設有田徑場等運動設施，鄰接大濠公園和福岡市立美術館。2026預估「 」開花、「 」盛開｜夜間點燈：2026/ / 開始</div>
+        <div class="tRow tRow--full" style="padding:6px 12px;">
+          <details style="margin-top:0;">
+            <summary>
+              <span class="sumText">往櫛田神社、冷泉公園、真言宗 東長寺 →</span>
+              <span class="chev">⌄</span>
+            </summary>
+            <div class="content" style="padding-top:0">
+              <div style="margin-top:8px; line-height:1.7; font-size:14px;">
+                🚶‍♂️ 步行　經春吉街區－位於天神與博多之間，在地生活氣息濃厚的巷弄小店與靜謐住宅區。距離約 1.5 公里／步行時間約 20–25 分鐘。<br>
+                🚌 公車　／　🚇 地鐵　／　🚕 計程車
               </div>
-            </div>
 
-            <div class="tRow tRow--full" style="padding-left:0;padding-right:0">
-              <div class="galleryWrap" aria-label="舞鶴公園／福岡城跡 照片" style="margin-top:0">
-                <p class="galleryTitle">📷 舞鶴公園／福岡城跡</p>
-                <div class="galleryRow galleryRow--flush" role="list">
-                  <div class="gItem" role="listitem" data-caption="舞鶴公園櫻花地圖（PDF）">
-                    <a href="day5/舞鶴公園櫻花地圖.pdf" target="_blank" rel="noopener" style="display:block;width:100%;height:100%">
-                      <img loading="lazy" src="day5/18.jpg" alt="舞鶴公園櫻花地圖" data-no-lightbox="1">
-                    </a>
+              <div class="tRow" style="padding:10px 0 6px;">
+                <div><div class="time">11:20</div></div>
+                <div>
+                  <div class="place">櫛田神社</div>
+                  <div class="meta">擁有古老歷史的櫛田神社為博多總鎮守(守護神)，以櫛田桑的暱稱受當地居民愛戴。櫻花數量不多屬於點綴型，垂櫻與八重櫻在滿開時在傳統建築的襯托下非常精緻。</div>
+                </div>
+              </div>
+              <div class="tRow tRow--full" style="padding:2px 0 8px;">
+                <div class="galleryWrap" aria-label="櫛田神社 照片" style="margin-top:0">
+                  <div class="galleryRow galleryRow--flush" role="list">
+                    <div class="gItem" role="listitem" data-caption="櫛田神社鳥居與櫻花"><img loading="lazy" src="day5/08.jpg" data-full="day5/08.jpg" alt="櫛田神社鳥居與櫻花"></div>
+                    <div class="gItem" role="listitem" data-caption="如同柳樹枝條般向下垂落的垂櫻"><img loading="lazy" src="day5/09.jpg" data-full="day5/09.jpg" alt="如同柳樹枝條般向下垂落的枝垂櫻"></div>
+                    <div class="gItem" role="listitem" data-caption="五瓣品種，樹齡可達數百年以上"><img loading="lazy" src="day5/10.jpg" data-full="day5/10.jpg" alt="五瓣品種，樹齡可達數百年以上"></div>
                   </div>
-                  <div class="gItem" role="listitem" data-caption="櫻花步道"><img loading="lazy" src="day5/19.jpg" data-full="day5/19.jpg" alt="櫻花步道"></div>
-                  <div class="gItem" role="listitem" data-caption="舞鶴公園草地"><img loading="lazy" src="day5/20.jpg" data-full="day5/20.jpg" alt="舞鶴公園草地"></div>
-                  <div class="gItem" role="listitem" data-caption="福岡城跡"><img loading="lazy" src="day5/21.jpg" data-full="day5/21.jpg" alt="福岡城跡"></div>
-                  <div class="gItem" role="listitem" data-caption="櫻花與城跡"><img loading="lazy" src="day5/22.jpg" data-full="day5/22.jpg" alt="櫻花與城跡"></div>
-                  <div class="gItem" role="listitem" data-caption="公園遠景"><img loading="lazy" src="day5/23.jpg" data-full="day5/23.jpg" alt="公園遠景"></div>
-                  <div class="gItem" role="listitem" data-caption="櫻花開放日期預測"><img loading="lazy" src="day5/24.jpg" data-full="day5/24.jpg" alt="櫻花開放日期預測"></div>
                 </div>
               </div>
 
-              <div class="noteTransit">
+              <div class="tRow" style="padding:8px 0 6px;">
+                <div><div class="time">11:50</div></div>
+                <div>
+                  <div class="place">冷泉公園</div>
+                  <div class="meta">神社旁的小型市區公園，櫻花以吉野櫻居多，櫻花盛開的時候，許多人會坐在櫻花樹下野餐。</div>
+                </div>
+              </div>
+              <div class="tRow tRow--full" style="padding:2px 0 8px;">
+                <div class="galleryWrap" aria-label="冷泉公園 照片" style="margin-top:0">
+                  <div class="galleryRow galleryRow--flush" role="list">
+                    <div class="gItem" role="listitem" data-caption="櫻花步道"><img loading="lazy" src="day5/11.jpg" data-full="day5/11.jpg" alt="冷泉公園櫻花步道"></div>
+                    <div class="gItem" role="listitem" data-caption="鐘塔與櫻花"><img loading="lazy" src="day5/12.jpg" data-full="day5/12.jpg" alt="冷泉公園鐘塔與櫻花"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tRow" style="padding:8px 0 6px;">
+                <div><div class="time">12:10</div></div>
+                <div>
+                  <div class="place">真言宗 東長寺</div>
+                  <div class="meta">可參拜日本最大木造坐像的佛像(高10.8ｍ，重30t)及體驗地獄極樂巡禮，費用約為 ¥100–¥300、觀賞櫻花。</div>
+                </div>
+              </div>
+              <div class="tRow tRow--full" style="padding:2px 0 8px;">
+                <div class="galleryWrap" aria-label="真言宗 東長寺 照片" style="margin-top:0">
+                  <div class="galleryRow galleryRow--flush" role="list">
+                    <div class="gItem" role="listitem" data-caption="福岡大佛"><img loading="lazy" src="day5/13.jpg" data-full="day5/13.jpg" alt="福岡大佛"></div>
+                    <div class="gItem" role="listitem" data-caption="東長寺入口超大櫻花樹"><img loading="lazy" src="day5/14.jpg" data-full="day5/14.jpg" alt="東長寺入口超大櫻花樹"></div>
+                    <div class="gItem" role="listitem" data-caption="五重塔與櫻花"><img loading="lazy" src="day5/15.jpg" data-full="day5/15.jpg" alt="五重塔與櫻花"></div>
+                    <div class="gItem" role="listitem" data-caption="櫻花與五重塔"><img loading="lazy" src="day5/16.jpg" data-full="day5/16.jpg" alt="櫻花與五重塔"></div>
+                    <div class="gItem" role="listitem" data-caption="櫻花特寫"><img loading="lazy" src="day5/17.jpg" data-full="day5/17.jpg" alt="櫻花特寫"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="noteTransit" style="margin-top:8px;">
+                🚇 <strong>真言宗 東長寺 → 天神地下街：</strong><br>
+                由「祇園站」（空港線）搭乘 1 站至「天神站」，約 5 分鐘（210 円）。
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="tRow tRow--full" style="padding:6px 12px;">
+          <details style="margin-top:0;">
+            <summary>
+              <span class="sumText">往舞鶴公園／福岡城跡 →</span>
+              <span class="chev">⌄</span>
+            </summary>
+            <div class="content" style="padding-top:0">
+              <div class="noteTransit--tight">
+                <div>搭乘公車／地鐵步行時間仍長，進入公園也要走，故直接搭乘計程車 🚕。</div>
+                <div>行車時間：約 12–20 分／費用：約 1500–2000 円（實際依交通、時間略有差）</div>
+              </div>
+
+              <div class="tRow" style="padding:10px 0 6px;">
+                <div><div class="time">11:30</div></div>
+                <div>
+                  <div class="place">舞鶴公園
+                    <a href="https://www-midorimachi-jp.translate.goog/maiduru/?_x_tr_sl=ja&_x_tr_tl=zh-TW&_x_tr_hl=ja" target="_blank" rel="noopener" style="margin-left:10px;font-size:13px;font-weight:600;color:#2563eb;">🌎</a>
+                    / 福岡城
+                    <a href="https://fukuokajyo.com/24627/" target="_blank" rel="noopener" style="margin-left:6px;font-size:13px;font-weight:600;color:#2563eb;">🌎</a>
+                  </div>
+                  <ul class="metaList">
+                    <li>以福岡城址為其象徵，自然景色四季分明，1000顆櫻花是福岡市內賞櫻最為知名的公園。園內並設有田徑場等運動設施，鄰接大濠公園和福岡市立美術館。</li>
+                    <li>福岡城天守台跡是這區最美的拍攝位子，可以俯瞰整個大濠公園與滿開的櫻花海。</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tRow tRow--full" style="padding:2px 0 8px;">
+                <div class="galleryWrap" aria-label="舞鶴公園／福岡城跡 照片" style="margin-top:0">
+                  <div class="galleryRow galleryRow--flush" role="list">
+                    <div class="gItem" role="listitem" data-caption="舞鶴公園櫻花地圖（PDF）">
+                      <a href="day5/舞鶴公園櫻花地圖.pdf" target="_blank" rel="noopener" style="display:block;width:100%;height:100%">
+                        <img loading="lazy" src="day5/18.jpg" alt="舞鶴公園櫻花地圖" data-no-lightbox="1">
+                      </a>
+                    </div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/19.jpg" data-full="day5/19.jpg" alt="19"></div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/20.jpg" data-full="day5/20.jpg" alt="20"></div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/881.jpg" data-full="day5/881.jpg" alt="881"></div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/21.jpg" data-full="day5/21.jpg" alt="21"></div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/22.jpg" data-full="day5/22.jpg" alt="22"></div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/23.jpg" data-full="day5/23.jpg" alt="23"></div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/884.jpg" data-full="day5/884.jpg" alt="884"></div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/883.jpg" data-full="day5/883.jpg" alt="883"></div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/882.jpg" data-full="day5/882.jpg" alt="882"></div>
+                    <div class="gItem" role="listitem"><img loading="lazy" src="day5/24.jpg" data-full="day5/24.jpg" alt="櫻花開放日期預測"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="noteTransit" style="margin-top:8px;">
                 🚇 <strong>舞鶴公園 → 天神地下街：</strong><br>
                 由「赤坂站」（空港線）搭乘 1 站至「天神站」，約 5 分鐘（210 円）。步行約 15–20 分鐘。
               </div>
 
-              <div class="desc" style="margin-top:10px">
+              <div class="desc" style="margin-top:10px; line-height:1.7; font-size:14px;">
                 🔎 <strong>補充：</strong>
                 可順遊 <strong>大濠公園</strong>（與舞鶴公園相連，步行約 5–10 分鐘）。
                 最美湖景星巴克／草間彌生的南瓜。
               </div>
 
-              <div class="galleryWrap" aria-label="大濠公園 照片" style="margin-top:12px">
-                <p class="galleryTitle">📷 大濠公園</p>
+              <div class="galleryWrap" aria-label="大濠公園 照片" style="margin-top:4px">
                 <div class="galleryRow galleryRow--flush" role="list">
                   <div class="gItem" role="listitem" data-caption="大濠公園地圖"><img loading="lazy" src="day5/25.jpg" data-full="day5/25.jpg" alt="大濠公園地圖"></div>
                   <div class="gItem" role="listitem" data-caption="湖畔步道"><img loading="lazy" src="day5/26.jpg" data-full="day5/26.jpg" alt="湖畔步道"></div>
@@ -319,47 +326,40 @@
                 </div>
               </div>
 
-              <div class="noteTransit">
+              <div class="noteTransit" style="margin-top:8px;">
                 🚇 <strong>大濠公園 → 天神地下街：</strong><br>
                 由「大濠公園站」（空港線）搭乘 1 站至「天神站」，約 3 分鐘（210 円）。出站後可直接銜接天神地下街。<br>
                 🚶‍♂️ 步行：約 1.8–2 公里／約 25–30 分鐘。<br>
                 🚕 計程車：約 10–15 分鐘／約 1200–1800 円（依交通狀況略有差異）。
               </div>
-
             </div>
+          </details>
+        </div>
+
+        <div style="margin:14px 12px 0 12px">
+          <div class="place">🛍 天神站附近｜逛街地圖</div>
+          <div class="meta">以天神地下街為起點：天神地下街 → PARCO → Solaria Plaza → 三越 → 大丸。</div>
+          <div style="margin-top:8px;line-height:1.8;font-size:14px;">
+            📍 <strong>天神地下街</strong>：地下商店街，雨天好走，藥妝／雜貨／伴手禮齊全，連接各大百貨。<br>
+            🛍 <strong>PARCO（天神）</strong>：年輕潮流感強，動漫聯名、Loft、無印良品，流行品牌多。<br>
+            🛍 <strong>Solaria Plaza</strong>：設計感與質感路線，女裝品牌多，咖啡廳好坐。<br>
+            🛍 <strong>福岡三越</strong>：傳統高級百貨，精品與地下美食街、禮盒伴手禮選擇多。<br>
+            🛍 <strong>大丸天神</strong>：穩重型百貨，地下食品區很強，甜點熟食好買。
           </div>
-        </details>
-      </div>
-
-      <!-- 🛍 天神站附近｜逛街地圖（移出收合層） -->
-      <div style="margin:14px 12px 0 12px">
-        <div class="place">🛍 天神站附近｜逛街地圖</div>
-        <div class="meta">以天神地下街為起點：天神地下街 → PARCO → Solaria Plaza → 三越 → 大丸。</div>
-
-        <div style="margin-top:8px;line-height:1.8;font-size:14px;">
-          📍 <strong>天神地下街</strong>：地下商店街，雨天好走，藥妝／雜貨／伴手禮齊全，連接各大百貨。<br>
-          🛍 <strong>PARCO（天神）</strong>：年輕潮流感強，動漫聯名、Loft、無印良品，流行品牌多。<br>
-          🛍 <strong>Solaria Plaza</strong>：設計感與質感路線，女裝品牌多，咖啡廳好坐。<br>
-          🛍 <strong>福岡三越</strong>：傳統高級百貨，精品與地下美食街、禮盒伴手禮選擇多。<br>
-          🛍 <strong>大丸天神</strong>：穩重型百貨，地下食品區很強，甜點熟食好買。
         </div>
       </div>
 
-    </div><!-- /.timeline -->
-
-  <!-- 導航控制鈕（移出收合層） -->
-  <div class="links" style="margin-top:14px; display:flex; flex-wrap:wrap; gap:8px;">
-    <a class="btn" target="_blank" rel="noopener" href="day5/天神地下街.pdf">📄 天神地下街（PDF）</a>
-    <a class="btn" target="_blank" rel="noopener" href="day5/百貨公司位置圖.pdf">📄 百貨公司位置圖（PDF）</a>
-
-    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=%E5%A4%A9%E7%A5%9E%E5%9C%B0%E4%B8%8B%E8%A1%97&travelmode=walking">📍 地下街</a>
-    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=PARCO%20Fukuoka%20Tenjin&travelmode=walking">🛍 PARCO（天神）</a>
-    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Solaria%20Plaza%20Fukuoka&travelmode=walking">🛍 Solaria Plaza</a>
-    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Fukuoka%20Mitsukoshi&travelmode=walking">🛍 三越（福岡天神）</a>
-    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Daimaru%20Fukuoka%20Tenjin&travelmode=walking">🛍 大丸（福岡天神）</a>
+      <div class="links" style="margin-top:14px; display:flex; flex-wrap:wrap; gap:8px;">
+        <a class="btn" target="_blank" rel="noopener" href="day5/天神地下街.pdf">📄 天神地下街（PDF）</a>
+        <a class="btn" target="_blank" rel="noopener" href="day5/百貨公司位置圖.pdf">📄 百貨公司位置圖（PDF）</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=%E5%A4%A9%E7%A5%9E%E5%9C%B0%E4%B8%8B%E8%A1%97&travelmode=walking">📍 地下街</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=PARCO%20Fukuoka%20Tenjin&travelmode=walking">🛍 PARCO（天神）</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Solaria%20Plaza%20Fukuoka&travelmode=walking">🛍 Solaria Plaza</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Fukuoka%20Mitsukoshi&travelmode=walking">🛍 三越（福岡天神）</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Daimaru%20Fukuoka%20Tenjin&travelmode=walking">🛍 大丸（福岡天神）</a>
+      </div>
+    </div>
   </div>
-
-  </div></div>
 </section>
         </template>
 
